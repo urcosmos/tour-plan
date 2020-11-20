@@ -26,7 +26,8 @@
 @media (max-width: 767px)
   .container
     max-width: 576px
-    width: 92%
+    width: calc(100% - 40px)
+    // width: 92%
   .navbar
     &__search, &-menu, &__user
       display: none
@@ -51,3 +52,7 @@
 @media (max-width: 575px)
   .logo
     width: 99px
+
+@media (min-width: 320px) and (max-width: 479px)
+  .container
+    min-width: 280px
