@@ -30,6 +30,9 @@
   .navbar
     &__search, &-menu, &__user
       display: none
+    &-top
+      padding-top: 28px
+      padding-bottom: 28px
   .menu
     &-button
       display: flex
@@ -48,9 +51,13 @@
         height: 1px
         background-color: $text-color
   .hotel
+    padding-top: 5px
+    padding-bottom: 20px
     &-info
       &__text
         width: 100%
+      &__stars
+        margin-right: 16px
       &__name
         margin-top: 10px
         margin-bottom: 0
@@ -61,6 +68,7 @@
         display: none
     &-name
       flex-basis: 100%
+      font-weight: 700
     &-wrapper
       justify-content: space-between
   .stars
