@@ -26,6 +26,14 @@
   &-description
     font-size: 12px
     line-height: 15px
+  &-grid
+    display: flex
+    justify-content: space-between
+  &-right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
 .stars
   flex-basis: 100%
 
@@ -102,3 +110,89 @@
     &--next
       right: 16px
       background-image: url('../img/arrow-next.svg')
+
+.booking
+  padding: 27px
+  width: 350px
+  min-height: 210px
+  color: $light
+  border-radius: 8px
+  background-color: $dark
+  &__info
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 9px
+  &__price
+    display: flex
+    flex-direction: column
+  &__start
+    font-family: Nunito
+    font-weight: 400
+    font-size: 10px
+    line-height: 14px
+  &__pricetag
+    font-family: Nunito
+    font-weight: 800
+    font-size: 24px
+    line-height: 33px
+  &__per-room
+    margin-top: -4px
+    font-family: Nunito
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+  &__room
+    margin-top: 4px
+  &__text
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 8px
+    font-family: Nunito
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+  &__description
+    margin-left: 9px
+  &__call-center
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 17px
+  &__heading
+    font-family: Nunito
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+  &__number
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-family: Nunito
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    color: inherit
+    text-decoration: none
+  &__num
+    margin-left: 8px
+  &__button
+    width: 100%
+    min-height: 45px
+    font-family: Nunito
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    color: $light
+    border-radius: 4px
+    background-color: $primary
+    border: 0
+    outline: 0
+    cursor: pointer
+
+.map
+  width: 350px
+  height: 213px
+  background-color: black
+  border-radius: 8px
