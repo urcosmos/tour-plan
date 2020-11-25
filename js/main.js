@@ -1,7 +1,7 @@
 var mySwiper = new Swiper('.swiper-container', {
-  autoplay: {
-    delay: 3000
-  },
+  // autoplay: {
+  //   delay: 3000
+  // },
   loop: true,
   keyboard: {
     enabled: true
