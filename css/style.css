@@ -689,7 +689,7 @@ img {
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
 }
 
-.swiper-slider__image {
+.swiper-slide__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -885,19 +885,29 @@ img {
 .map {
   width: 350px;
   height: 213px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  overflow: hidden;
 }
 
 .map__content {
   width: 100%;
   height: 100%;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
   border: 0;
 }
 
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
+  }
+  .hotel-map-group {
+    -webkit-flex-basis: 1;
+        -ms-flex-preferred-size: 1;
+            flex-basis: 1;
+    margin-left: 30px;
+  }
+  .slider {
+    min-width: 200px;
   }
 }
 
@@ -924,6 +934,34 @@ img {
     line-height: 15px;
   }
   .search__input {
+    width: 340px;
+  }
+  .hotel {
+    padding-bottom: 60px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel-map-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    margin-left: 0;
+  }
+  .slider {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .booking, .map {
     width: 340px;
   }
 }
@@ -1008,10 +1046,31 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .hotel-map-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .stars {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+  }
+  .slider {
+    height: 360px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  .booking, .map {
+    width: 100%;
+  }
+  .map {
+    height: 173px;
+  }
+  .hotel-map-group__booking {
+    margin-bottom: 20px;
   }
 }
 
@@ -1019,11 +1078,17 @@ img {
   .logo {
     width: 99px;
   }
+  .slider {
+    height: 315px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
   .container {
     min-width: 280px;
+  }
+  .slider {
+    height: 179px;
   }
 }
 /*# sourceMappingURL=style.css.map */
