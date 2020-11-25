@@ -884,9 +884,14 @@ img {
 .map {
   width: 350px;
   height: 213px;
-  background-color: black;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
+}
+
+.map__content {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 0;
 }
 
 @media (max-width: 1199px) {
