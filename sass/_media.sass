@@ -48,8 +48,13 @@
   .booking
     padding: 29px 22px 26px 23px
 
+  .newsletter
+    padding: 92px 0 93px
+    &-wrapper
+      width: 700px
+
 @media (max-width: 767px)
-  .container
+  .container, .newsletter-wrapper
     max-width: 576px
     width: calc(100% - 40px)
   .navbar
@@ -110,6 +115,32 @@
     height: 173px
   .hotel-map-group__booking
     margin-bottom: 20px
+  .newsletter
+    padding: 76px 0 83px
+    &-wrapper
+      flex-direction: column
+      align-items: flex-start
+    &-title
+      font-weight: 300
+      font-size: 20px
+      line-height: 25px
+      &--mb37
+        margin-bottom: 37px
+      &__strong
+        font-weight: 600
+        font-size: 30px
+        line-height: 38px
+        &--mt5
+          margin-top: 5px
+    &-subscribe
+      width: 100%
+  .subscribe
+    &__input
+      padding-left: 20px
+      padding-right: 20px
+      flex-basis: calc(100% - 65px)
+    &__button
+      flex-basis: 65px
 
 @media (max-width: 575px)
   .logo
