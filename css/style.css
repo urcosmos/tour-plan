@@ -917,11 +917,6 @@ img {
   position: relative;
   padding-top: 98px;
   padding-bottom: 87px;
-  background-image: url("../img/newsletter-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
 }
 
 .newsletter:before {
@@ -1025,6 +1020,11 @@ img {
   background-color: #ec1f46;
   border: none;
   outline: none;
+}
+
+.parallax-window {
+  min-height: 50px;
+  background: transparent;
 }
 
 @media (max-width: 1199px) {
