@@ -11,6 +11,8 @@
 @media (max-width: 991px)
   .container
     max-width: 700px
+    &-short
+      width: 673px
   .logo
     width: 132px
   .navbar
@@ -18,7 +20,7 @@
       padding-top: 30px
       padding-bottom: 30px
     &__search
-      margin-left: auto
+      margin-left: 48px
     &-menu
       &__list
         padding-top: 22px
@@ -42,6 +44,9 @@
     width: 100%
   .booking, .map
     width: 340px
+    height: 210px
+  .booking
+    padding: 29px 22px 26px 23px
 
 @media (max-width: 767px)
   .container
@@ -109,6 +114,23 @@
 @media (max-width: 575px)
   .logo
     width: 99px
+    &--mt4
+      margin-top: -4px
+  .breadcrumb
+    &-list
+      padding-top: 20px
+      padding-bottom: 17px
+  .hotel
+    &-info
+      &__offer
+        margin-top: 0
+        margin-left: 1px
+  .star
+    &:last-child
+      margin-right: 0
+  .booking
+    &__num
+      margin-right: 2px
   .slider
     height: 315px
 

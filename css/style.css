@@ -932,6 +932,9 @@ img {
   .container {
     max-width: 700px;
   }
+  .container-short {
+    width: 673px;
+  }
   .logo {
     width: 132px;
   }
@@ -940,7 +943,7 @@ img {
     padding-bottom: 30px;
   }
   .navbar__search {
-    margin-left: auto;
+    margin-left: 48px;
   }
   .navbar-menu__list {
     padding-top: 22px;
@@ -980,6 +983,10 @@ img {
   }
   .booking, .map {
     width: 340px;
+    height: 210px;
+  }
+  .booking {
+    padding: 29px 22px 26px 23px;
   }
 }
 
@@ -1094,6 +1101,23 @@ img {
 @media (max-width: 575px) {
   .logo {
     width: 99px;
+  }
+  .logo--mt4 {
+    margin-top: -4px;
+  }
+  .breadcrumb-list {
+    padding-top: 20px;
+    padding-bottom: 17px;
+  }
+  .hotel-info__offer {
+    margin-top: 0;
+    margin-left: 1px;
+  }
+  .star:last-child {
+    margin-right: 0;
+  }
+  .booking__num {
+    margin-right: 2px;
   }
   .slider {
     height: 315px;
