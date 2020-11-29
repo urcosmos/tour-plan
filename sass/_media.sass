@@ -7,7 +7,18 @@
       margin-left: 30px
   .hotel-slider
     min-width: 200px
-
+  .activities
+    padding-bottom: 70px
+    &-wrapper
+      flex-wrap: wrap
+      margin-left: -20px
+  .card
+    flex-grow: 1
+    min-width: 338px
+    margin-left: 20px
+    margin-bottom: 20px
+    &__title
+      max-width: 200px
 @media (max-width: 991px)
   .container
     max-width: 700px
@@ -73,6 +84,7 @@
           left: 0
         &--next
           right: 0
+
 @media (max-width: 767px)
   .container, .newsletter-wrapper
     max-width: 576px
@@ -189,6 +201,34 @@
           transform: translate(50%, -50%)
           margin-right: -88px
 
+  .activities
+    padding: 40px 0 60px
+    &__title
+      margin-bottom: 36px
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      text-transform: uppercase
+    &-wrapper
+      margin-left: 0
+      flex-direction: column
+
+  .card
+    width: 100%
+    min-width: 280px
+    margin-left: 0
+    &:nth-child(1)
+      order: 0
+    &:nth-child(2)
+      order: 2
+    &:nth-child(3)
+      order: 1
+      margin-bottom: 28px
+    &:nth-child(4)
+      order: 3
+    &:last-child
+      margin-bottom: 0
+
 @media (max-width: 575px)
   .logo
     width: 99px
@@ -226,5 +266,4 @@
       width: 245px
     &-slider
       &__text
-
         min-width: 219px

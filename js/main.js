@@ -17,9 +17,9 @@ var reviewsSlider = new Swiper('.reviews-slider', {
   //   delay: 1000
   // },
   loop: true,
-  keyboard: {
-    enabled: true
-  },
+  // keyboard: {
+  //   enabled: true
+  // },
   navigation: {
     nextEl: '.reviews-slider__button--next',
     prevEl: '.reviews-slider__button--prev',
