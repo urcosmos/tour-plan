@@ -1,4 +1,4 @@
-var mySwiper = new Swiper('.swiper-container', {
+var hotelSlider = new Swiper('.hotel-slider__container', {
   // autoplay: {
   //   delay: 3000
   // },
@@ -7,8 +7,22 @@ var mySwiper = new Swiper('.swiper-container', {
     enabled: true
   },
   navigation: {
-    nextEl: '.slider-button--next',
-    prevEl: '.slider-button--prev',
+    nextEl: '.hotel-slider__button--next',
+    prevEl: '.hotel-slider__button--prev',
+  },
+});
+
+var reviewsSlider = new Swiper('.reviews-slider', {
+  // autoplay: {
+  //   delay: 1000
+  // },
+  loop: true,
+  keyboard: {
+    enabled: true
+  },
+  navigation: {
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
   },
 });
 

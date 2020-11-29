@@ -684,7 +684,7 @@ img {
   line-height: 13px;
 }
 
-.swiper-container {
+.hotel-slider__container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -692,7 +692,7 @@ img {
           border-radius: 8px;
 }
 
-.swiper-container::after {
+.hotel-slider__container::after {
   content: '';
   position: absolute;
   top: 0;
@@ -706,19 +706,19 @@ img {
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
 }
 
-.swiper-slide__image {
+.hotel-slide__image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.slider {
+.hotel-slider {
   width: 728px;
   height: 450px;
 }
 
-.slider-button {
+.hotel-slider__button {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -737,12 +737,12 @@ img {
   outline: none;
 }
 
-.slider-button--prev {
+.hotel-slider__button--prev {
   left: 16px;
   background-image: url("../img/arrow-prev.svg");
 }
 
-.slider-button--next {
+.hotel-slider__button--next {
   right: 16px;
   background-image: url("../img/arrow-next.svg");
 }
@@ -904,6 +904,7 @@ img {
   height: 213px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
+  background-color: dodgerblue;
   overflow: hidden;
 }
 
@@ -1028,6 +1029,23 @@ img {
   background: transparent;
 }
 
+.reviews {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0 70px;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
@@ -1038,7 +1056,7 @@ img {
             flex-basis: 1;
     margin-left: 30px;
   }
-  .slider {
+  .hotel-slider {
     min-width: 200px;
   }
 }
@@ -1092,7 +1110,7 @@ img {
             flex-basis: 0;
     margin-left: 0;
   }
-  .slider {
+  .hotel-slider {
     margin-bottom: 30px;
     width: 100%;
   }
@@ -1203,7 +1221,7 @@ img {
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
   }
-  .slider {
+  .hotel-slider {
     height: 360px;
     margin-top: 18px;
     margin-bottom: 20px;
@@ -1285,7 +1303,7 @@ img {
   .booking__num {
     margin-right: 2px;
   }
-  .slider {
+  .hotel-slider {
     height: 315px;
   }
 }
@@ -1294,7 +1312,7 @@ img {
   .container {
     min-width: 280px;
   }
-  .slider {
+  .hotel-slider {
     height: 179px;
   }
 }
