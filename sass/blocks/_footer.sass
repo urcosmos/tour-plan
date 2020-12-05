@@ -5,26 +5,29 @@
   background-color: $dark
   &-wrapper
     display: grid
-    grid-template-columns: repeat(4, minmax(min-content, 1fr))
-    grid-gap: 20px
-    grid-auto-rows: minmax(40px, min-content)
+    // grid-template-columns: repeat(4, minmax(min-content, 1fr))
+    grid-template-columns: 285px 285px 345px 1fr
+    // grid-gap: 20px
+    // grid-auto-rows: minmax(40px, min-content)
+    grid-template-rows: 176px 47px 89px 317px
     align-items: start
+    margin-bottom: 95px
   &__logo
     align-self: center
     grid-row: 1 / 3
-    width: 166px
+    width: 154px
+    margin-top: 11px
   &__categories
     grid-row: 1 / 4
   &__social
     &-links
       display: flex
-      align-items: center
+      align-items: flex-end
       justify-content: space-between
       min-width: 83px
     &-network
       display: flex
-      align-content: start
-
+      align-content: end
       grid-row: 2 / 4
       grid-column: span 2
   &__contact
@@ -43,9 +46,11 @@
     list-style: none
     &--grid-settings
       display: flex
+      align-items: center
       justify-content: space-between
       grid-column: 2
       justify-self: center
+      margin-top: 7px
       width: 283px
   &__title
     margin-top: 0
@@ -55,9 +60,15 @@
     line-height: 23px
     text-transform: uppercase
     &--inline
-      margin: 0 43px 0 0
+      margin: 18px 44px 0 0
     &--mb-3
       margin-bottom: 34px
+    &--mb-19
+      margin-bottom: 19px
+    &--mt-12
+      margin-top: 12px
+      margin-left: -3px
+      margin-bottom: 24px
   &__item
     display: flex
     align-items: flex-start
@@ -65,14 +76,26 @@
     font-size: 14px
     line-height: 160%
     color: $footer-text-color
-    &--mb-2
-      margin-bottom: 20px
+    &--mb-18
+      margin-bottom: 8px
+    &--mb-22
+      margin-bottom: 22px
   &__icon
     &-wrapper
       min-width: 20px
-      margin-right: 20px
+      margin-right: 18px
+      &--pd-3
+        padding: 3px 2px
   &__icon
-    width: 20px
+    &--map
+      width: 24px
+      height: 30px
+    &--telephone
+      width: 24px
+      height: 34px
+    &--mail
+      width: 25px
+      height: 20px
   &__text
     margin-top: 0
     margin-bottom: 22px
@@ -80,6 +103,8 @@
     font-size: 14px
     line-height: 160%
     color: $footer-text-color
+    &--ml-3
+      margin-left: -3px
   &__link
     text-decoration: none
     color: inherit
@@ -88,12 +113,19 @@
       font-weight: 400
       font-size: 12px
       line-height: 15px
+    &-social-icon
+      width: 100%
+      height: 100%
+    &--lh-1
+      width: 20px
+      height: 20px
+      line-height: 1
   &__telephone
     &-wrapper
       display: flex
       flex-direction: column
   &__input
-    flex-basis: 47%
+    flex-basis: 255px
     height: 50px
     padding: 0 23px
     margin-bottom: 15px
@@ -107,8 +139,9 @@
     outline: none
   &__message
     flex-basis: 100%
+    height: 123px
     padding: 18px 23px
-    margin-bottom: 23px
+    margin-bottom: 22px
     font-weight: 400
     font-size: 12px
     line-height: 15px
@@ -117,6 +150,7 @@
     border-radius: 4px
     border: none
     outline: none
+    resize: none
   &__button
     min-width: 160px
     min-height: 50px
@@ -134,6 +168,8 @@
     font-size: 12px
     line-height: 15px
     color: $footer-text-color
+    &--mr-1
+      margin-right: 1px
   &__disclaimer
     display: grid
     grid-template-columns: repeat(3, 1fr)
