@@ -164,12 +164,54 @@
   .container, .newsletter-wrapper
     max-width: 576px
     width: calc(100% - 40px)
+  body
+    padding-top: 74px
   .navbar
-    &__search, &-menu, &__user
+    &__search, &__user
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+    &__search
+      margin-right: 0
+      margin-left: 0
+    &-bottom
       display: none
+      position: fixed
+      top: 71px
+      right: 0
+      bottom: 0
+      left: 0
+      &--visible
+        display: block
+    &-menu
+      &__list
+        flex-direction: column
+        padding-top: 30px
+      &__item
+        &--mobile
+          &--visible
+            display: block
+        &--mb-27
+          margin-bottom: 27px
+        &--mb-39
+          margin-bottom: 39px
+        &--mb-18
+          margin-bottom: 18px
     &-top
       padding-top: 28px
       padding-bottom: 28px
+    &--mobile
+      &--fixed
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        z-index: 99
   .menu
     &-button
       display: flex
@@ -187,6 +229,13 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        margin-top: 10px
+        margin-left: 0
+        color: $light
+
   .hotel
     padding-top: 5px
     padding-bottom: 40px
@@ -449,3 +498,6 @@
       &--inline
         flex-basis: 100%
         margin: 0px 44px 22px 0px
+  .search
+    &__input
+      width: 245px
