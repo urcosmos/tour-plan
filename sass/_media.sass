@@ -161,6 +161,11 @@
         &--grid-settings
           grid-column: 1
           width: 283px
+  .modal
+    &__dialog
+      width: 380px
+      padding: 33px 44px
+
 @media (max-width: 767px)
   .container, .newsletter-wrapper
     max-width: 576px
@@ -506,3 +511,16 @@
   .search
     &__input
       width: 245px
+
+  .modal
+    &__dialog
+      width: calc( 100% - 40px )
+      padding: 15px 15px
+    &__wrapper
+      flex-direction: column
+    &__info
+      align-self: start
+      order: -1
+      margin-bottom: 15px
+    &__button
+      width: 100%
