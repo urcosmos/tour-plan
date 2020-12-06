@@ -36,6 +36,7 @@ $(document).ready(function () {
 
   menuButton.on('click', function () {
     $('.navbar-bottom').toggleClass('navbar-bottom--visible');
+    $('body').toggleClass('body-overflow');
   });
 
   var modalButton = $('[data-toggle=modal]');
@@ -45,13 +46,17 @@ $(document).ready(function () {
 
   function openModal() {
     var modal = $('.modal');
+    var body = $('body');
     modal.addClass('modal--visible');
+    body.addClass('body-overflow');
   }
 
   function closeModal(event) {
     event.preventDefault();
     var modal = $('.modal');
+    var body = $('body');
     modal.removeClass('modal--visible');
+    body.removeClass('body-overflow');
   }
 
   $(document).on('keyup', function (evt) {

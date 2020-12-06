@@ -352,6 +352,10 @@ body {
   background-color: #F5FAFE;
 }
 
+.body-overflow {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1110px;
   margin: auto;
@@ -2479,6 +2483,17 @@ img {
   }
   .reviews-slider__text {
     width: 78%;
+  }
+  .modal__dialog {
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 15px;
+    left: 50%;
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px);
+    max-height: 490px;
+    overflow: auto;
   }
 }
 
