@@ -1637,10 +1637,7 @@ img {
 }
 
 .modal {
-  visibility: hidden;
-  -webkit-transition: visibility 0.5s;
-  -o-transition: visibility 0.5s;
-  transition: visibility 0.5s;
+  display: none;
 }
 
 .modal__overlay {
@@ -1670,7 +1667,7 @@ img {
 }
 
 .modal--visible {
-  visibility: visible;
+  display: block;
 }
 
 .modal__close {
