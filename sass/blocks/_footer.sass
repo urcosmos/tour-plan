@@ -9,7 +9,7 @@
     grid-template-columns: 285px 285px 345px 1fr
     // grid-gap: 20px
     // grid-auto-rows: minmax(40px, min-content)
-    grid-template-rows: 176px 47px 89px 317px
+    grid-template-rows: 177px 45px 90px 318px
     align-items: start
     margin-bottom: 95px
   &__logo
@@ -44,14 +44,6 @@
     padding: 0
     margin: 0
     list-style: none
-    &--grid-settings
-      display: flex
-      align-items: center
-      justify-content: space-between
-      grid-column: 2
-      justify-self: center
-      margin-top: 7px
-      width: 283px
   &__title
     margin-top: 0
     margin-bottom: 16px
@@ -85,8 +77,7 @@
       min-width: 20px
       margin-right: 18px
       &--pd-3
-        padding: 3px 2px
-  &__icon
+        padding: 2px 0px
     &--map
       width: 24px
       height: 30px
@@ -173,6 +164,24 @@
   &__disclaimer
     display: grid
     grid-template-columns: repeat(3, 1fr)
+    &-ul
+      padding: 0
+      margin: 0
+      &--grid-settings
+        display: flex
+        align-items: center
+        justify-content: space-between
+        grid-column: 2
+        justify-self: center
+        margin-top: 7px
+        width: 283px
+    &-item
+      display: flex
+      align-items: flex-start
+      font-weight: 400
+      font-size: 14px
+      line-height: 160%
+      color: $footer-text-color
   &__image
     grid-column: 3
     justify-self: end
