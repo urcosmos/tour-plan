@@ -1914,6 +1914,7 @@ img {
     margin-left: 0;
   }
   .navbar-bottom {
+    overflow: auto;
     display: none;
     position: fixed;
     top: 71px;
@@ -1954,6 +1955,7 @@ img {
     right: 0;
     left: 0;
     z-index: 99;
+    height: 71px;
   }
   .menu-button {
     display: -webkit-box;
