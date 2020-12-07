@@ -1663,7 +1663,7 @@ img {
   max-height: 490px;
   height: -webkit-calc(100% - 30px);
   height: calc(100% - 30px);
-  padding: 33px 88px;
+  padding: 33px 88px 0;
   color: #ffffff;
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -1727,6 +1727,11 @@ img {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+}
+
+.modal__form {
+  display: block;
+  padding-bottom: 33px;
 }
 
 @media (max-width: 1199px) {
@@ -1984,7 +1989,10 @@ img {
   }
   .modal__dialog {
     width: 380px;
-    padding: 33px 44px;
+    padding: 33px 44px 0;
+  }
+  .modal__form {
+    padding-bottom: 33px;
   }
 }
 
@@ -2517,7 +2525,7 @@ img {
   .modal__dialog {
     width: -webkit-calc( 100% - 40px);
     width: calc( 100% - 40px);
-    padding: 15px 15px;
+    padding: 15px 15px 0;
   }
   .modal__wrapper {
     -webkit-box-orient: vertical;
@@ -2539,6 +2547,9 @@ img {
   }
   .modal__button {
     width: 100%;
+  }
+  .modal__form {
+    padding-bottom: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
