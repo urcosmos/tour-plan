@@ -7,16 +7,38 @@ require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
+$email = $_POST['email'];
 $message = $_POST['message'];
+$sendNewsletter = $_POST['send-newsletter'];
+$sendFeedback = $_POST['send-feedback'];
+$sendBooking = $_POST['send-booking'];
 
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if (isset($_POST['send-newsletter'])) {
+  $title = "Подписка на НОВОСТИ";
+  $body = "
+  <h2>Новое обращение</h2>
+  Новый пользователь хочет подписаться на новости.<br>
+  Его <b>e-mail:</b> $email
+  ";
+} else if (isset($_POST['send-feedback'])) {
+  $title = "Новое обращение Best Tour Plan";
+  $body = "
+  <h2>Новое обращение</h2>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br><br>
+  <b>Сообщение:</b><br>$message
+  ";
+} else if (isset($_POST['send-booking'])) {
+  $title = "Новое бронирование отеля";
+  $body = "
+  <h2>Новое бронирование отеля</h2>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br><br>
+  <b>E-mail:</b> $email<br><br>
+  <b>Сообщение:</b><br>$message
+  ";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -69,4 +91,10 @@ else {$result = "error";}
 
 // Отображение результата
 // echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-header('Location: thankyou.html');
+if (isset($_POST['send-newsletter'])) {
+  header('Location: thankyou.html');
+} else if (isset($_POST['send-feedback'])) {
+  header('Location: thankyou.html');
+} else if (isset($_POST['send-booking'])) {
+  header('Location: thankyou.html');
+}

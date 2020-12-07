@@ -407,6 +407,13 @@ img {
   background-color: #ec1f46;
   border: none;
   outline: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.button--mt-20 {
+  margin-top: 20px;
 }
 
 .navbar {

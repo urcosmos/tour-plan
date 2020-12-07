@@ -143,7 +143,7 @@
           </p>
         </div>
         <!-- /.hotel-info__text -->
-        <div data-toggle="modal" class="rating hotel-info__rating">
+        <div class="rating hotel-info__rating">
           <span class="rating__text">User Ratings</span>
           <span class="rating__counter">4.5/</span><span class="rating__counter-total">5</span>
         </div>
@@ -228,9 +228,9 @@
         subscribe to our
         <span class="newsletter-title__strong newsletter-title__strong--mt5">newsletter</span>
       </h2>
-      <form action="#" class="subscribe newsletter-subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address">
-        <button class="subscribe__button">Send</button>
+      <form action="send.php" method="POST" class="subscribe newsletter-subscribe">
+        <input type="text" name="email" class="subscribe__input" placeholder="Your email address">
+        <input type="submit" name="send-newsletter" value="Send" class="subscribe__button"></input>
       </form>
     </div>
     <!-- /.newsletter-wrapper -->
@@ -369,7 +369,7 @@
           of chamarel">
           <h3 class="card__title">The curious corner
             of&nbsp;chamarel</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card">
@@ -377,7 +377,7 @@
           course">
           <h3 class="card__title">Gymkhana club golf
             course</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card">
@@ -385,7 +385,7 @@
           trip - full day">
           <h3 class="card__title">Tamarind falls hiking
             trip&nbsp;-&nbsp;full day</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
         <div class="card">
@@ -393,7 +393,7 @@
           quest">
           <h3 class="card__title">The blue marine discovery
             quest</h3>
-          <button class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
       </div>
@@ -495,7 +495,7 @@
             <input name="phone" type="text" class="input footer__input" placeholder="Phone Number*">
             <textarea name="message" cols="30" rows="10" class="message footer__message"
               placeholder="Message"></textarea>
-            <button class="button footer__button">Send</button>
+            <input type="submit" name="send-feedback" value="Send" class="button footer__button"></input>
             <span class="footer__info footer__info--mr-1">* Required Fields</span>
           </form>
         </div>
@@ -529,13 +529,13 @@
         <img src="img/close.svg" alt="Icon: close modal window" class="modal__close-pic">
       </a>
       <h3 class="modal__title">Booking</h3>
-      <form action="#" class="modal__form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*">
-        <input type="text" class="input modal__input" placeholder="Phone Number*">
-        <input type="text" class="input modal__input" placeholder="Email*">
-        <textarea cols="30" rows="10" class="message modal__message" placeholder="Message"></textarea>
+      <form action="send.php" method="POST" class="modal__form">
+        <input type="text" name="name" class="input modal__input" placeholder="Your Full Name*">
+        <input type="text" name="phone" class="input modal__input" placeholder="Phone Number*">
+        <input type="text" name="email" class="input modal__input" placeholder="Email*">
+        <textarea cols="30" rows="10" name="message" class="message modal__message" placeholder="Message"></textarea>
         <div class="modal__wrapper">
-          <button class="button modal__button">Send</button>
+          <input type="submit" name="send-booking" value="Send" class="button modal__button"></input>
           <span class="modal__info">* Required Fields</span>
         </div>
       </form>
