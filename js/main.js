@@ -64,7 +64,7 @@ $(document).ready(function () {
       var modal = $('.modal');
       var body = $('body');
       modal.removeClass('modal--visible');
-      body.addClass('body-overflow');
+      body.removeClass('body-overflow');
     }
   });
 
