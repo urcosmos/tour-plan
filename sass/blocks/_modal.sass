@@ -1,5 +1,8 @@
 .modal
   display: none
+  // height: 100vh
+  // overflow: auto
+
   &__overlay
     position: fixed
     top: 0
@@ -14,11 +17,14 @@
     left: 50%
     z-index: 101
     max-width: 478px
+    max-height: 490px
+    height: calc(100% - 30px)
     padding: 33px 88px
     color: $light
     border-radius: 8px
     background-color: $dark
     transform: translate(-50%, -50%)
+    overflow: auto
   &--visible
     display: block
 

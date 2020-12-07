@@ -1660,6 +1660,9 @@ img {
   left: 50%;
   z-index: 101;
   max-width: 478px;
+  max-height: 490px;
+  height: -webkit-calc(100% - 30px);
+  height: calc(100% - 30px);
   padding: 33px 88px;
   color: #ffffff;
   -webkit-border-radius: 8px;
@@ -1668,6 +1671,7 @@ img {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: auto;
 }
 
 .modal--visible {
@@ -2483,17 +2487,6 @@ img {
   }
   .reviews-slider__text {
     width: 78%;
-  }
-  .modal__dialog {
-    -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    top: 15px;
-    left: 50%;
-    height: -webkit-calc(100% - 30px);
-    height: calc(100% - 30px);
-    max-height: 490px;
-    overflow: auto;
   }
 }
 
