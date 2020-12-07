@@ -62,7 +62,9 @@ $(document).ready(function () {
   $(document).on('keyup', function (evt) {
     if (evt.keyCode == 27) {
       var modal = $('.modal');
+      var body = $('body');
       modal.removeClass('modal--visible');
+      body.addClass('body-overflow');
     }
   });
 
