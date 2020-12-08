@@ -24,7 +24,8 @@
       grid-template-columns: repeat(4, minmax(min-content, 1fr))
       grid-template-rows: 195px 47px 89px 383px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__ul
       max-width: 92%
 @media (max-width: 991px)
@@ -148,7 +149,8 @@
       &--ml-3
         margin-left: 0
     &__input
-      flex-basis: 255px
+      &-group
+        flex-basis: 255px
     &__ul
       &--ml-4
         margin-left: 4px
@@ -305,7 +307,8 @@
     &__input
       padding-left: 20px
       padding-right: 20px
-      flex-basis: calc(100% - 65px)
+      &-group
+        flex-basis: calc(100% - 65px)
     &__button
       flex-basis: 65px
 
@@ -446,7 +449,8 @@
       &-wrapper
         max-width: 228px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__message
       margin-bottom: 16px
     &__info

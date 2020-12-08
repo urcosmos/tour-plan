@@ -1,33 +1,38 @@
 .modal
   display: none
-  // height: 100vh
-  // overflow: auto
-
+  &--visible
+    display: block
   &__overlay
     position: fixed
     top: 0
     right: 0
     bottom: 0
     left: 0
-    background-color: rgba(0, 143, 223, 0.39)
     z-index: 100
+    background-color: rgba(0, 143, 223, 0.39)
+    opacity: 0
+    transition: all 0.5s ease
+    &--visible
+      opacity: 1
+
   &__dialog
     position: fixed
     top: 50%
     left: 50%
     z-index: 101
     max-width: 478px
-    max-height: 490px
-    height: calc(100% - 30px)
+    max-height: calc( 100% - 30px )
     padding: 33px 88px 0
     color: $light
     border-radius: 8px
     background-color: $dark
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) scale(0.8)
     overflow: auto
-  &--visible
-    display: block
-
+    opacity: 0
+    transition: all 0.5s
+    &--visible
+      opacity: 1
+      transform: translate(-50%, -50%) scale(1)
   &__close
     position: absolute
     top: 17px
@@ -44,15 +49,17 @@
     text-transform: uppercase
   &__input
     width: 100%
-    margin-bottom: 15px
+    margin-top: 15px
   &__message
     width: 100%
     min-height: 123px
-    margin-bottom: 15px
+    margin-top: 15px
+
   &__wrapper
     display: flex
     justify-content: space-between
     align-items: center
+    margin-top: 15px
   &__info
     font-weight: 700
     font-size: 12px

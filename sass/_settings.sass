@@ -29,6 +29,14 @@ img
   border: none
   outline: none
 
+input.invalid,
+input.invalid-subscribe
+  border: 2px solid $primary
+
+// label.invalid
+//   position: absolute
+//   top: 0px
+
 .message
   height: 123px
   padding: 18px 23px
@@ -43,19 +51,39 @@ img
   resize: none
 
 .button
+  display: inline-block
   min-width: 160px
   min-height: 50px
   padding: 17px
   font-weight: 700
   font-size: 12px
   line-height: 15px
+  text-decoration: none
+  text-align: center
   color: $light
   border-radius: 4px
   background-color: $primary
   border: none
   outline: none
-  text-decoration: none
-  display: inline-block
-  text-align: center
+  cursor: pointer
   &--mt-20
     margin-top: 20px
+
+.invalid,
+.invalid-subscribe
+  font-weight: 700
+  color: $primary
+
+label.invalid-subscribe
+  position: absolute
+  left: 0
+  top: 65px
+  width: 100%
+
+.search__button,
+.button,
+.subscribe__button,
+.card__button,
+  transition: all 0.3s ease
+  &:hover
+    background-color: #16578b

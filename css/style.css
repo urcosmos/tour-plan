@@ -379,6 +379,11 @@ img {
   outline: none;
 }
 
+input.invalid,
+input.invalid-subscribe {
+  border: 2px solid #ec1f46;
+}
+
 .message {
   height: 123px;
   padding: 18px 23px;
@@ -395,25 +400,55 @@ img {
 }
 
 .button {
+  display: inline-block;
   min-width: 160px;
   min-height: 50px;
   padding: 17px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
+  text-decoration: none;
+  text-align: center;
   color: #ffffff;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #ec1f46;
   border: none;
   outline: none;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  cursor: pointer;
 }
 
 .button--mt-20 {
   margin-top: 20px;
+}
+
+.invalid,
+.invalid-subscribe {
+  font-weight: 700;
+  color: #ec1f46;
+}
+
+label.invalid-subscribe {
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+}
+
+.search__button,
+.button,
+.subscribe__button,
+.card__button {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.search__button:hover,
+.button:hover,
+.subscribe__button:hover,
+.card__button:hover {
+  background-color: #16578b;
 }
 
 .navbar {
@@ -474,12 +509,30 @@ img {
 }
 
 .navbar-menu__link {
+  position: relative;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+}
+
+.navbar-menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu__link:hover::after {
+  width: 100%;
 }
 
 .logo {
@@ -1052,16 +1105,10 @@ img {
           justify-content: space-between;
   width: 350px;
   height: 55px;
-  overflow: hidden;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
 }
 
 .subscribe__input {
-  -webkit-flex-basis: 285px;
-      -ms-flex-preferred-size: 285px;
-          flex-basis: 285px;
-  min-width: 100px;
+  width: 100%;
   height: 100%;
   padding-right: 33px;
   padding-left: 33px;
@@ -1069,8 +1116,19 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: #BDBDBD;
+  -webkit-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
+}
+
+.subscribe__input-group {
+  position: relative;
+  height: 100%;
+  -webkit-flex-basis: 285px;
+      -ms-flex-preferred-size: 285px;
+          flex-basis: 285px;
+  min-width: 100px;
 }
 
 .subscribe__button {
@@ -1085,8 +1143,11 @@ img {
   line-height: 15px;
   color: #ffffff;
   background-color: #ec1f46;
+  -webkit-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .reviews {
@@ -1425,10 +1486,9 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-align-content: end;
+      -ms-flex-line-pack: end;
+          align-content: end;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -1567,6 +1627,10 @@ img {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   -webkit-flex-basis: 255px;
       -ms-flex-preferred-size: 255px;
           flex-basis: 255px;
@@ -1651,14 +1715,26 @@ img {
   display: none;
 }
 
+.modal--visible {
+  display: block;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 143, 223, 0.39);
   z-index: 100;
+  background-color: rgba(0, 143, 223, 0.39);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.modal__overlay--visible {
+  opacity: 1;
 }
 
 .modal__dialog {
@@ -1667,22 +1743,28 @@ img {
   left: 50%;
   z-index: 101;
   max-width: 478px;
-  max-height: 490px;
-  height: -webkit-calc(100% - 30px);
-  height: calc(100% - 30px);
+  max-height: -webkit-calc( 100% - 30px);
+  max-height: calc( 100% - 30px);
   padding: 33px 88px 0;
   color: #ffffff;
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-color: #0A223D;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+      -ms-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
   overflow: auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.modal--visible {
-  display: block;
+.modal__dialog--visible {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 
 .modal__close {
@@ -1705,13 +1787,13 @@ img {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__wrapper {
@@ -1727,6 +1809,7 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1782,7 +1865,7 @@ img {
     -ms-grid-rows: 195px 47px 89px 383px;
         grid-template-rows: 195px 47px 89px 383px;
   }
-  .footer__input {
+  .footer__input-group {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
@@ -1972,7 +2055,7 @@ img {
   .footer__text--ml-3 {
     margin-left: 0;
   }
-  .footer__input {
+  .footer__input-group {
     -webkit-flex-basis: 255px;
         -ms-flex-preferred-size: 255px;
             flex-basis: 255px;
@@ -2214,6 +2297,8 @@ img {
   .subscribe__input {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .subscribe__input-group {
     -webkit-flex-basis: -webkit-calc(100% - 65px);
         -ms-flex-preferred-size: calc(100% - 65px);
             flex-basis: calc(100% - 65px);
@@ -2431,7 +2516,7 @@ img {
   .footer__telephone-wrapper {
     max-width: 228px;
   }
-  .footer__input {
+  .footer__input-group {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;

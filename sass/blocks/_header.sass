@@ -27,12 +27,24 @@
         &--visible
           display: none
     &__link
+      position: relative
       font-size: 14px
       font-weight: 700
       line-height: 18px
       text-transform: uppercase
       text-decoration: none
       color: inherit
+      &::after
+        content: ''
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 0
+        height: 1px
+        background-color: $light
+        transition: width 0.3s ease
+      &:hover::after
+        width: 100%
 
 .logo
   width: 177px
@@ -55,6 +67,7 @@
     background-color: $secondary
     border: none
     outline: none
+
   &__button
     display: flex
     align-items: center

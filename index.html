@@ -27,6 +27,7 @@
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon/"> -->
   <title>Best Tour Plan - Hotel Booking</title>
@@ -36,7 +37,7 @@
   <header class="navbar navbar--mobile--fixed">
     <div class="container">
       <div class="navbar-top">
-        <a href="/best-tour-plan/" class="logo logo--mt4">
+        <a href="/best-tour-plan/" class="logo logo--mt4" data-aos="fade-right">
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
         </a>
         <form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -229,7 +230,9 @@
         <span class="newsletter-title__strong newsletter-title__strong--mt5">newsletter</span>
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter-subscribe">
-        <input type="text" name="email" class="subscribe__input" placeholder="Your email address">
+        <div class="subscribe__input-group">
+          <input type="email" name="email" class="subscribe__input" placeholder="Your email address" required>
+        </div>
         <input type="submit" name="send-newsletter" value="Send" class="subscribe__button">
       </form>
     </div>
@@ -364,7 +367,7 @@
     <div class="container">
       <h2 class="activities__title">Other Activities</h2>
       <div class="activities-wrapper">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img class="card__image" src="img/activites-01.jpg" alt="The curious corner
           of chamarel">
           <h3 class="card__title">The curious corner
@@ -372,7 +375,7 @@
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img class="card__image" src="img/activites-02.jpg" alt="Gymkhana club golf
           course">
           <h3 class="card__title">Gymkhana club golf
@@ -380,7 +383,7 @@
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img class="card__image" src="img/activites-03.jpg" alt="Tamarind falls hiking
           trip - full day">
           <h3 class="card__title">Tamarind falls hiking
@@ -388,7 +391,7 @@
           <button data-toggle="modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img class="card__image" src="img/activites-04.jpg" alt="The blue marine discovery
           quest">
           <h3 class="card__title">The blue marine discovery
@@ -490,9 +493,14 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input name="name" type="text" class="input footer__input" placeholder="Your Full Name*">
-            <input name="phone" type="text" class="input footer__input" placeholder="Phone Number*">
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input name="name" type="text" class="input footer__input" placeholder="Your Full Name*" required>
+            </div>
+            <div class="footer__input-group">
+              <input name="phone" type="tel" class="input footer__input input--phone-masked"
+                placeholder="+7 (123) 456-78-90*" required minlength="18">
+            </div>
             <textarea name="message" cols="30" rows="10" class="message footer__message"
               placeholder="Message"></textarea>
             <input type="submit" name="send-feedback" value="Send" class="button footer__button">
@@ -529,10 +537,11 @@
         <img src="img/close.svg" alt="Icon: close modal window" class="modal__close-pic">
       </a>
       <h3 class="modal__title">Booking</h3>
-      <form action="send.php" method="POST" class="modal__form">
-        <input type="text" name="name" class="input modal__input" placeholder="Your Full Name*">
-        <input type="text" name="phone" class="input modal__input" placeholder="Phone Number*">
-        <input type="text" name="email" class="input modal__input" placeholder="Email*">
+      <form action="send.php" method="POST" class="modal__form form">
+        <input type="text" name="name" class="input modal__input" placeholder="Your Full Name*" required minlength="2">
+        <input type="tel" name="phone" class="input modal__input input--phone-masked" placeholder="+7 (123) 456-78-90*"
+          required minlength="18">
+        <input type="email" name="email" class="input modal__input" placeholder="Email*" required>
         <textarea cols="30" rows="10" name="message" class="message modal__message" placeholder="Message"></textarea>
         <div class="modal__wrapper">
           <input type="submit" name="send-booking" value="Send" class="button modal__button">
@@ -544,8 +553,11 @@
   </div>
   <!-- /.modal -->
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 
