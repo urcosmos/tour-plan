@@ -232,13 +232,15 @@
               <input name="name" type="text" class="input footer__input" placeholder="Your Full Name*" required>
             </div>
             <div class="footer__input-group">
-              <input name="phone" type="tel" class="input footer__input" placeholder="Phone Number*" required
-                minlength="18">
+              <input name="phone" type="tel" class="input footer__input input--phone-masked" placeholder="Phone Number*"
+                required minlength="18">
             </div>
             <textarea name="message" cols="30" rows="10" class="message footer__message"
               placeholder="Message"></textarea>
-            <input type="submit" name="send-feedback" value="Send" class="button footer__button">
-            <span class="footer__info footer__info--mr-1">* Required Fields</span>
+            <div class="footer__form-wrapper">
+              <input type="submit" name="send-feedback" value="Send" class="button footer__button">
+              <span class="footer__info footer__info--mr-1">* Required Fields</span>
+            </div>
           </form>
         </div>
         <!-- /.footer__contact-form -->
@@ -269,6 +271,7 @@
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 
