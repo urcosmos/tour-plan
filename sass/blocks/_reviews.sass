@@ -17,6 +17,8 @@
       flex-direction: column
       align-items: center
       width: 731px
+      // если нужно вернуть все обратно, то удали max-h
+      max-height: 281px
       margin: 45px auto 0
       border-radius: 8px
       background-color: #ffffff
@@ -64,12 +66,20 @@
       height: 8px
     &__text
       width: 537px
-      margin: 0
-      padding-bottom: 30px
+      // если нужно вернуть все обратно, то удали max-h
+      max-height: 146px
+      // если нужно вернуть все обратно, то удали марджины топ и боттом и верни обычный марджин
+      // margin: 0
+      margin-top: 0
+      margin-bottom: 30px
+      // если нужно вернуть все обратно, то верни padding-b
+      // padding-bottom: 30px
       font-weight: normal
       font-size: 12px
       line-height: 160%
       text-align: justify
+      // если нужно вернуть все обратно, то удали оверфлоу
+      overflow-y: auto
     &__button
       position: absolute
       top: 50%

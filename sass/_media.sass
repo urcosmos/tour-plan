@@ -38,6 +38,30 @@
     &:hover
       background-color: #16578b
 
+  .navbar
+    &-menu
+      &__link
+        &::after
+          content: ''
+          position: absolute
+          bottom: -5px
+          left: 0
+          width: 0
+          height: 1px
+          background-color: $light
+          transition: width 0.3s ease
+        &:hover::after
+          width: 100%
+
+  .footer
+    &__link
+      &:hover
+        color: $light
+      &-social
+        &-icon
+          &:hover
+            fill: $light
+
 @media (max-width: 991px)
   .container
     max-width: 700px
@@ -91,12 +115,14 @@
     &-slider
       &__item
         width: 579px
+        max-height: 300px
         &::before
           display: none
         &::after
           display: none
       &__text
         width: 455px
+        max-height: 165px
       &__button
         transform: translateY(-50%)
         &--prev
@@ -334,10 +360,14 @@
         margin-bottom: 42px
     &-slider
       &__item
+        max-height: 440px
         max-width: 576px
         width: 100%
       &__text
-        padding-bottom: 36px
+        max-height: 266px
+        margin-bottom: 36px
+        // overflow: visible
+        // padding-bottom: 36px
       &__button
         top: 45px
         &--prev
@@ -522,8 +552,10 @@
       margin-right: auto
       width: 245px
     &-slider
+      // max-height: 438px
       &__text
         min-width: 219px
+        max-height: 268px
 
   .footer
     &__title
