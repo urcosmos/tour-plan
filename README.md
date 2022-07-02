@@ -9,4 +9,4 @@
 
 # Посмотреть проект
 
-(Здесь)[https://evoe.dev/projects/best-tour-plan/]
+[Здесь](https://evoe.dev/projects/best-tour-plan/)
