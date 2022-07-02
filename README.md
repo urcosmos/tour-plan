@@ -6,3 +6,7 @@
 
 # Куратор
 Рия Романова
+
+# Посмотреть проект
+
+(Здесь)[https://evoe.dev/projects/best-tour-plan/]
